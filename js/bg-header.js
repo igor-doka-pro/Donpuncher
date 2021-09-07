@@ -1,6 +1,6 @@
 "use strict";
 
-const bg = document.querySelector('.page__header');
+const bg = document.querySelector('.page-header');
 
 let getRandom = (min, max) => {
   return Math.round(Math.random() * (max - min) + min);

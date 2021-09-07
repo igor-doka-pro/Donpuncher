@@ -14,7 +14,7 @@ body {
   font-family: 'Montserrat', 'Arial' ,sans-serif;
 }
 
-.page__header {
+.page-header {
   position: relative;
   height: 110vh;
   width: 100%;
@@ -22,23 +22,24 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
-  transition: background-image 3s ease-in-out; 
+  transition: background-image 3s ease-in-out;
+  background-color: #ededed;
 }
 
 
-.page__header::after {
+.page-header::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 20, 61, 0.4);
   width: 100%;
   height: 100%;
 }
 
 
   /* Social, namePage, buttonTraining*/
-.page__header--wrapper1 {
+.wrapper1 {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -48,31 +49,31 @@ body {
   z-index: 2;
 }
 
-.page__header--namePage {
+.name-page {
   margin-left: 140px;
   order: 1;
 }
 
-.page__header--social {
+.social {
   order: 0;
 }
 
-.page__header--button {
+.button {
   order: 2;
 }
 
 
-.page__header--social {
+.social {
   list-style: none;
   display: flex;
 }
 
-.page__header--social li {
+.social li {
   padding: 0 5px;
 }
 
 
-.page__header--namePage {
+.name-page {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -80,7 +81,7 @@ body {
   letter-spacing: 1px;
 }
 
-.page__header--button {
+.button {
   outline: none;
   background-color: transparent;
   border: 1px solid #fff;
@@ -95,9 +96,9 @@ body {
   font-size: 13px;
 }
 
-.page__header--button:hover {
+.button:hover {
   border-color: #0090f2;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
   color: #0090f2;
 }
 
@@ -114,20 +115,20 @@ hr {
 
   /* Navigation */
 
-.page__header--navigation {
+.navigation {
   position: relative;
   margin: 0 40px;
   margin-bottom: 220px;
   z-index: 2;
 }
 
-.page__header--navigation ul {
+.navigation ul {
   display: flex;
   list-style: none;
   justify-content: center;
 }
 
-.page__header--navigation-item a {
+.navigation-item a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -141,14 +142,14 @@ hr {
   cursor: pointer;
 }
 
-.page__header--navigation-item a:hover {
-  transition: 0.3s;
+.navigation-item a:hover {
+  transition: 0.3s ease-in-out;
   color: #0090f2;
 }
 
   /* Logo and namePage, shape */
 
-.page__header--wrapper2 {
+.wrapper2 {
   position: relative;
   display: flex;
   align-items:center;
@@ -157,13 +158,13 @@ hr {
   z-index: 2;
 }
 
-.page__header--logo {
+.logo {
   position: relative;
   margin-bottom: 60px;
   z-index: 2;
 }
 
-.page__header--shape {
+.shape {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -173,9 +174,119 @@ hr {
 
 
 
+/* Types of classes and cost */
 
-
-
-section {
-  margin-bottom: 80px;
+.classes-and-cost {
+  background-color: #ededed;
+  padding-top: 75px;
 }
+
+.classes-and-cost h3 {
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color:#1a143d;
+  margin-bottom: 115px;
+}
+
+.classes-and-cost h3::after {
+  content: '';
+  position: absolute;
+  left: 20%;
+  top: 80px;
+  width: 260px;
+  height: 1px;
+  background-color: #1a143d;
+}
+
+.classes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 100px;
+  padding-bottom: 75px;
+}
+
+.classes-list figure {
+  width: 260px;
+  height: 356px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.classes-list figure:hover {
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+}
+
+.individual img, .group img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.class {
+  color: #1a143d;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  color: #1f5da4;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price span {
+  display: block;
+  padding-top: 10px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 42px;
+  padding: 30px 0;
+  background-color: #1a143d;
+  ;
+}
+
+.wrapper h4 {
+  color:#fff;
+  text-align: center;
+  line-height: 42px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/* Go training */
+
+.go-training {
+  position: relative;
+  width: 100%;
+  height: 560px;
+}
+
+.go-training .wrapper3 {
+  display: flex;
+  position: relative;
+}
+.go-training .wrapper3::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 20, 61, 0.5);
+  transform: opacity;
+  transition: 0.2s ease-in-out;
+}
+
