@@ -32,7 +32,7 @@
           </a>
         </li>
       </ul>
-      <button class="button">Записаться на<p>тренировку</p></button>
+      <button type="button" class="button">Записаться</button>
     </div>
     <hr>
     
@@ -80,14 +80,17 @@
     </section>
     
     <section class="go-training">
-      <div class= "wrapper3">
-        <img src="img/adult.jpg" width="50%" height="560" alt="Детские группы">
-        <img src="img/children.jpg" width="50%" height="560" alt="Детские группы">
+      <div class="parallax" data-parallax="scroll" data-z-index="1" data-speed="0.2" data-image-src="/img/ring.jpg"></div>
+      <div class="join-club">
+        <h1 class="join-club-title">Записаться на тренировку</h1>
+        <p class="join-club-description">Заполните заявку на вступление в Боксерский клуб «Donpuncher» и<br>мы с Вами свяжемся в течение 24 часов!</p>
+        <button type="button" class="button">Записаться на тренировку</button>
+      </div>
+      <div class="bg-red">
+        <p class="personal-date">В соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006, отправляя любую форму на этом<br>сайте, вы подтверждаете свое согласие на обработку персональных данных.</p>
       </div>
     </section>
-
-    В соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006, отправляя любую форму на этом сайте, вы подтверждаете свое согласие на обработку персональных данных.
-
+   
     <section>
       ПЕРВОЕ ПРЕИМУЩЕСТВО (фотография огражденная с 2-х сторон узорами
       в соответствии с шаблоном)
@@ -146,9 +149,12 @@
 
   </footer>
 
-  
+
   <script src="/js/bg-header.js"></script>
   <script src="/js/social-buttons.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/js/parallax.min.js"></script>
+
   
 </body>
 </html>

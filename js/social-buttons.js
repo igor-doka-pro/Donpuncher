@@ -7,7 +7,7 @@ const socialButtons = document.querySelectorAll('.social-item svg path'),
 const buttonChangeColorHandler = (evt) => {
   socialButtons.forEach(button => {
     if (button == evt.target) {
-      button.style.fill = '#0090f2';
+      button.style.fill = '#799ec8';
       button.style.transition = '0.3s';
     }
   });
@@ -17,7 +17,6 @@ const buttonDefaultColorHandler = (evt) => {
   socialButtons.forEach(button => {
     if (button == evt.target) {
       button.style.fill = '#fff';
-      button.style.transition = '0.3s';
     }
   });
 };

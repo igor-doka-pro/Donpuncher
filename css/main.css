@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -22,8 +26,8 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
-  transition: background-image 3s ease-in-out;
-  background-color: #ededed;
+  transition: background-image 2.5s ease-in-out, background-color 2.5s ease-in-out;
+  background-color: #000 /* #ededed */;
 }
 
 
@@ -32,7 +36,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(26, 20, 61, 0.4);
+  background-color: rgba(26, 20, 61, 0.5);
   width: 100%;
   height: 100%;
 }
@@ -50,14 +54,11 @@ body {
 }
 
 .name-page {
-  margin-left: 140px;
   order: 1;
 }
-
 .social {
   order: 0;
 }
-
 .button {
   order: 2;
 }
@@ -72,13 +73,13 @@ body {
   padding: 0 5px;
 }
 
-
 .name-page {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
+  margin-left: 50px;
 }
 
 .button {
@@ -87,19 +88,20 @@ body {
   border: 1px solid #fff;
   border-radius: 1px;
   vertical-align: middle;
-  height: 50px;
-  width: 150px;
-  font-weight: 600;
+  height: 43px;
+  width: max-content;
+  padding: 0 30px;
+  font-weight: 700;
   font-family: 'Montserrat';
   color: #fff;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .button:hover {
-  border-color: #0090f2;
-  transition: 0.3s ease-in-out;
-  color: #0090f2;
+  color: #799ec8;
+  border-color: #799ec8;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 hr {
@@ -124,19 +126,19 @@ hr {
 
 .navigation ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
 }
 
 .navigation-item a {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   height: 60px;
   padding: 0 20px;
   font-family: 'Montserrat';
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color:#fff;
   cursor: pointer;
@@ -144,7 +146,7 @@ hr {
 
 .navigation-item a:hover {
   transition: 0.3s ease-in-out;
-  color: #0090f2;
+  color: #1f5da4;
 }
 
   /* Logo and namePage, shape */
@@ -173,7 +175,6 @@ hr {
 }
 
 
-
 /* Types of classes and cost */
 
 .classes-and-cost {
@@ -196,8 +197,9 @@ hr {
 .classes-and-cost h3::after {
   content: '';
   position: absolute;
-  left: 20%;
+  left: 50%;
   top: 80px;
+  margin-left: -130px;
   width: 260px;
   height: 1px;
   background-color: #1a143d;
@@ -216,12 +218,9 @@ hr {
   width: 260px;
   height: 356px;
   background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 40px 0px rgba(26, 20, 61, 0.5);;
 }
 
-.classes-list figure:hover {
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
-}
 
 .individual img, .group img {
   margin-bottom: 20px;
@@ -254,11 +253,11 @@ hr {
   height: 42px;
   padding: 30px 0;
   background-color: #1a143d;
-  ;
+  background-attachment: fixed;
 }
 
 .wrapper h4 {
-  color:#fff;
+  color: #fff;
   text-align: center;
   line-height: 42px;
   letter-spacing: 2px;
@@ -276,17 +275,72 @@ hr {
   height: 560px;
 }
 
-.go-training .wrapper3 {
-  display: flex;
+.parallax {
   position: relative;
-}
-.go-training .wrapper3::after {
-  position: absolute;
-  content: "";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 20, 61, 0.5);
-  transform: opacity;
-  transition: 0.2s ease-in-out;
 }
 
+.parallax::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 561px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.join-club {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  color: #fff;
+  width: 960px;
+  height: 232px;
+  margin-left: -480px;
+  margin-top: -116px;
+  text-align: center;
+}
+
+.join-club-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  line-height: 1.23;
+}
+
+.join-club-description {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  line-height: 1.5;
+}
+
+.join-club .button {
+  text-transform: uppercase;
+  height: 43px;
+}
+
+.bg-red {
+  width: 100%;
+  height: 76px;
+  background-color: #910a13;
+}
+
+.personal-date {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.75;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+  padding-top: 22px;
+  
+}
