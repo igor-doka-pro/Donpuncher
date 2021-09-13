@@ -11,4 +11,5 @@ let changeBackground = () => {
 };
 
 
-setInterval(changeBackground, 3000);
+setInterval(changeBackground, 4000);
+
