@@ -6,10 +6,7 @@ let getRandom = (min, max) => {
   return Math.round(Math.random() * (max - min) + min);
 };
 
-let changeBackground = () => {
+let timerId = setTimeout(function changeBackground() {
   bg.style.backgroundImage = `url(/img/bg${getRandom(1, 5)}.jpg)`;
-};
-
-
-setInterval(changeBackground, 4000);
-
+  timerId = setTimeout(changeBackground, 3000);
+}, 3000);

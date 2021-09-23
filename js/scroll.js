@@ -1,16 +1,22 @@
 'use strict';
 
-/* const mask = document.querySelector('.mask');
+const mask = document.querySelector('.mask'),
+      beforeBlockMask = document.querySelector('.classes-list figure'),
+      textInMask = document.querySelector('.join-club-description');
 
-let tp = mask.getBoundingClientRect().top + document.body.scrollTop;
+window.addEventListener('scroll', function(evt) {
+  evt.preventDefault();
+  
 
-window.addEventListener('scroll', (evt) => {
-  let coordinateMaskY = null;
-  console.log(mask.getBoundingClientRect().y)
-  if (mask.getBoundingClientRect().top > tp) {
-    mask.style.opacity = '1';
+  let preCoordinateScrollY = beforeBlockMask.getBoundingClientRect().top;
+  let postCoordinateScrollY = textInMask.getBoundingClientRect().top;
+
+
+  if ( (preCoordinateScrollY < (-beforeBlockMask.offsetHeight / 3)) && (postCoordinateScrollY > 0) ) {
+    mask.style.opacity = '0.6';
   } else {
     mask.style.opacity = '0.4';
   }
-  console.log(mask.getBoundingClientRect().y, tp);
-}); */
+
+  
+});
