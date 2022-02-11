@@ -1,0 +1,21 @@
+:root {
+  --main-color: #1a143d;
+  --bg-color: #ededed;
+  --button-hover-color: #799ec8;
+  --nav-hover-color: #799ec8;
+  --title-color: #0090f2;
+  --darken-main-color: #080614;
+  --not-important-link-color: #c8c8c8;
+  --white: #ffffff;
+  --black: #000000;
+  --darken-red-color: #910a13;
+}
+
+/* Header */
+
+.coach-bg {
+  background-image: url(/img/coach-bg.jpg);
+}
+
+/* Main */
+

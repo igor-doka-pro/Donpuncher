@@ -18,5 +18,4 @@ window.addEventListener('scroll', function(evt) {
     mask.style.opacity = '0.4';
   }
 
-  
 });

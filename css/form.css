@@ -1,0 +1,181 @@
+/* Form-header */
+
+.form-page {
+  position: relative;
+}
+
+.form-header {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  height: 180vh;
+  width: 100%;
+
+  background-image: url(/img/bg-form.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% -15.5vh;
+  background-attachment: fixed;
+}
+
+.mask-bg {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--black);
+  opacity: 0.5;
+  /* transition: opacity 1.5s ease-in-out; */
+}
+
+.form-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--main-color);
+  opacity: 0.7;
+}
+
+.form-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+}
+
+/* Main-form */
+
+.main-form {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+
+  margin-left: -460px;
+
+  color: var(--white);
+}
+
+.main-form h1, .main-form h2 {
+  text-align: center;
+}
+.main-form h1 {
+  margin-bottom: 40px;
+  
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main-form h2 {
+  margin-bottom: 30px;
+  
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  width: 920px;
+}
+
+.form {
+  display: block;
+  margin: 0 auto;
+}
+
+.form input {
+  all: unset;
+  display: block;
+
+  width: 560px;
+
+  padding: 26px 0 10px 0;
+
+  color: var(--white);
+
+  border-bottom: 2px solid var(--white);
+}
+
+.form label {
+  position: relative;
+  display: block;
+
+  margin-bottom: 20px;
+
+  cursor: text;
+}
+
+.form span {
+  position: absolute;
+  top: 20px;
+  left: 0; 
+
+  font-size: 16px;
+  color: var(--white);
+
+  opacity: 0.5;
+  transition: top 0.2s, font-size 0.2s;
+}
+
+.form button {
+  width: 560px;
+  height: 52px;
+
+  margin-bottom: 10px;
+
+  font-size: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+}
+
+.form-wrapper p {
+  margin: 30px 0;
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+  /* validity-form */
+
+.message-validity {
+  font-size: 12px;
+  color: red;
+  margin-top: 7px;
+}
+
+.message-validity-submit {
+  width: 100%;
+  height: 57px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+  line-height: 57px;
+  color: #ffffff;
+  
+  background-color: #f95d51;
+}
+
+.input-tel::placeholder {
+  color: var(--white);
+}

@@ -1,12 +1,29 @@
 "use strict";
 
-const bg = document.querySelector('.page-header');
+const header = document.querySelector('.page-header');
 
-let getRandom = (min, max) => {
-  return Math.round(Math.random() * (max - min) + min);
-};
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-let timerId = setTimeout(function changeBackground() {
-  bg.style.backgroundImage = `url(/img/bg${getRandom(1, 5)}.jpg)`;
-  timerId = setTimeout(changeBackground, 3000);
-}, 3000);
+function load(src) {
+  return new Promise(function(resolve, reject) {
+      const image = new Image();
+      image.src = src;
+      image.addEventListener('load', resolve);
+      image.addEventListener('error', reject);
+  });
+}
+
+function changeBg() {
+  let path = `/img/bg${getRandom(1, 5)}.jpg`;
+  
+  load(path).then(() => {
+    header.style.backgroundImage = `url(${path})`;
+  });
+}
+
+
+setInterval(changeBg, 3000);
+
+ 
