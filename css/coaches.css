@@ -1,21 +1,27 @@
-:root {
-  --main-color: #1a143d;
-  --bg-color: #ededed;
-  --button-hover-color: #799ec8;
-  --nav-hover-color: #799ec8;
-  --title-color: #0090f2;
-  --darken-main-color: #080614;
-  --not-important-link-color: #c8c8c8;
-  --white: #ffffff;
-  --black: #000000;
-  --darken-red-color: #910a13;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Header */
 
 .coach-bg {
-  background-image: url(/img/coach-bg.jpg);
+  background-image: url(/img/coaches/coach-bg.jpg);
+}
+
+.navigation-item:first-child a {
+  color: var(--nav-hover-color);
 }
 
 /* Main */
+
+.coach-card-list {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; 
+
+  margin: 32px 0;
+}
 

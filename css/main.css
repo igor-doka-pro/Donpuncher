@@ -9,6 +9,7 @@
   --white: #ffffff;
   --black: #000000;
   --darken-red-color: #910a13;
+  --breadcrumbs: #858585;
 }
 
 * {
@@ -183,8 +184,8 @@ hr {
   padding: 0 20px;
 
   text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 600;
   color: var(--white);
 
   cursor: pointer;
@@ -800,7 +801,7 @@ hr {
   letter-spacing: 1px;
 }
 
-.address-sportclubs h3 {
+.address-sportclubs h3, h4 {
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -814,7 +815,7 @@ hr {
   line-height: 1.55;
 }
 
-.address-sportclubs h3::after {
+.address-sportclubs h4::after {
   content: '';
   position: absolute;
   top: 60px;
@@ -1042,12 +1043,14 @@ hr {
 }
 
 .common-title {
+  margin-bottom: 54px;
+  
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 54px;
+  color: var(--white);
 }
 
 .common-title + h1 {
@@ -1064,20 +1067,54 @@ hr {
 
   /* common for main */
 
+.common-main {
+  display: flex;
+  justify-content: center;
+}
+
 .common-container {
-  margin-bottom: 75px;
+  width: 1160px;
+  
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .common-breadcrumb-list {
+  list-style: none;
+  display: inline-flex;
 
+  width: 100%;
+
+  padding: 120px 0 15px 0;
 }
 
 .common-breadcrumb-item {
+  color: var(--breadcrumbs);
+}
 
+.common-breadcrumb-item a {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.common-breadcrumb-item:first-child a, .common-breadcrumb-item:first-child span {
+  padding-right: 10px;
+}
+
+.common-breadcrumb-item:hover a{
+  color: var(--title-color);
+  transition: color 0.3s ease-in-out;
 }
 
 .common-divader {
+  width: 100%;
+  padding: 28px 0;
+}
 
+.common-divader hr {
+  margin: 8px 0;
+  background-color: var(--breadcrumbs);
 }
 
 /* common for footer */
